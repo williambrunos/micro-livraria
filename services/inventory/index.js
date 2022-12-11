@@ -21,7 +21,7 @@ server.addService(inventoryProto.InventoryService.service, {
         });
     },
     SearchProductByID: (payload, callback) => {
-        //SearchProductByID
+        //SearchProductByID - Aqui implementamos o método que definimos a assinatura no .proto
         callback(
             null,
             products.find((product) => product.id == payload.request.id)

@@ -46,7 +46,7 @@ app.get('/shipping/:cep', (req, res, next) => {
  * Consulta o id do produto
 */
 app.get('/product/:id', (req, res, next) => {
-    // Chama método do microsserviço.
+    // Chama método do microsserviço - Definindo a rota para chamar a nossa função
     inventory.SearchProductByID({ id: req.params.id }, (err, product) => {
         // Se ocorrer algum erro de comunicação
         // com o microsserviço, retorna para o navegador.
